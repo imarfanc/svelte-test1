@@ -1,0 +1,134 @@
+---
+title: About Us
+description: Learn more about our project with beautiful icons
+---
+
+<script>
+  import Icon from '@iconify/svelte';
+</script>
+
+<div class="prose prose-lg max-w-none">
+
+# About Our Project
+
+Welcome! This page demonstrates how to use **Iconify icons** in your Markdown content.
+
+## <Icon icon="mdi:rocket-launch" class="inline-block" /> Features
+
+Here are some amazing features of this project:
+
+### <Icon icon="mdi:palette" class="inline-block text-primary" /> Beautiful Design
+
+We use DaisyUI and Tailwind CSS to create stunning, responsive interfaces that look great on any device.
+
+### <Icon icon="mdi:lightning-bolt" class="inline-block text-warning" /> Lightning Fast
+
+Built with SvelteKit for optimal performance and instant page loads.
+
+### <Icon icon="mdi:code-tags" class="inline-block text-secondary" /> Developer Friendly
+
+Clean code, great documentation, and easy to customize.
+
+## <Icon icon="mdi:account-group" class="inline-block" /> Our Team
+
+<div class="not-prose grid gap-6 md:grid-cols-3 my-8">
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body items-center text-center">
+      <Icon icon="mdi:account-circle" class="text-6xl text-primary" />
+      <h3 class="card-title">Developers</h3>
+      <p>Building amazing experiences</p>
+    </div>
+  </div>
+  
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body items-center text-center">
+      <Icon icon="mdi:palette-swatch" class="text-6xl text-secondary" />
+      <h3 class="card-title">Designers</h3>
+      <p>Creating beautiful interfaces</p>
+    </div>
+  </div>
+  
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body items-center text-center">
+      <Icon icon="mdi:chart-line" class="text-6xl text-accent" />
+      <h3 class="card-title">Analysts</h3>
+      <p>Optimizing performance</p>
+    </div>
+  </div>
+</div>
+
+## <Icon icon="mdi:tools" class="inline-block" /> Tech Stack
+
+<div class="not-prose my-6">
+  <div class="flex flex-wrap gap-4">
+    <div class="badge badge-lg gap-2">
+      <Icon icon="logos:svelte-icon" />
+      SvelteKit
+    </div>
+    <div class="badge badge-lg gap-2">
+      <Icon icon="logos:tailwindcss-icon" />
+      Tailwind CSS
+    </div>
+    <div class="badge badge-lg gap-2">
+      <Icon icon="mdi:flower-tulip" class="text-secondary" />
+      DaisyUI
+    </div>
+    <div class="badge badge-lg gap-2">
+      <Icon icon="logos:typescript-icon" />
+      TypeScript
+    </div>
+    <div class="badge badge-lg gap-2">
+      <Icon icon="logos:vitejs" />
+      Vite
+    </div>
+  </div>
+</div>
+
+## <Icon icon="mdi:email" class="inline-block" /> Get In Touch
+
+<div class="not-prose my-8">
+  <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content">
+    <div class="card-body">
+      <h3 class="card-title text-2xl">
+        <Icon icon="mdi:message-text" class="text-3xl" />
+        Contact Us
+      </h3>
+      <p>We'd love to hear from you!</p>
+      <div class="flex gap-4 mt-4">
+        <a href="https://github.com" target="_blank" class="btn btn-ghost">
+          <Icon icon="mdi:github" class="text-2xl" />
+          GitHub
+        </a>
+        <a href="https://twitter.com" target="_blank" class="btn btn-ghost">
+          <Icon icon="mdi:twitter" class="text-2xl" />
+          Twitter
+        </a>
+        <a href="mailto:hello@example.com" class="btn btn-ghost">
+          <Icon icon="mdi:email" class="text-2xl" />
+          Email
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+## <Icon icon="mdi:star" class="inline-block text-warning" /> Why Choose Us?
+
+- <Icon icon="mdi:check-circle" class="inline-block text-success" /> **Open Source** - Free and open for everyone
+- <Icon icon="mdi:check-circle" class="inline-block text-success" /> **Well Documented** - Easy to understand and use
+- <Icon icon="mdi:check-circle" class="inline-block text-success" /> **Active Community** - Get help when you need it
+- <Icon icon="mdi:check-circle" class="inline-block text-success" /> **Regular Updates** - Always improving
+
+---
+
+<div class="not-prose alert alert-success my-6">
+  <Icon icon="mdi:information" class="text-2xl" />
+  <span>
+    <strong>Pro Tip:</strong> You can use any icon from 
+    <a href="https://icon-sets.iconify.design/" target="_blank" class="link">Iconify's massive collection</a> 
+    of 200,000+ icons!
+  </span>
+</div>
+
+</div>
+

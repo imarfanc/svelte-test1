@@ -20,6 +20,7 @@
 		</div>
 		<div class="flex-none gap-2">
 			<a href="{base}/docs" class="btn btn-ghost">📄 Docs</a>
+			<a href="{base}/about" class="btn btn-ghost">ℹ️ About</a>
 			<!-- Theme Dropdown -->
 			<div class="dropdown dropdown-end">
 				<div tabindex="0" role="button" class="btn btn-ghost">

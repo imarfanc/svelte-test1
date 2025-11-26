@@ -1,0 +1,145 @@
+---
+title: Documentation
+description: Learn how to use this SvelteKit + DaisyUI project
+---
+
+<script>
+  let count = $state(0);
+</script>
+
+<div class="prose prose-lg max-w-none">
+
+# 📚 Documentation
+
+Welcome to the documentation! This page is written in **Markdown** and rendered using [mdsvex](https://mdsvex.com/).
+
+## What is mdsvex?
+
+MDsveX is a markdown preprocessor for Svelte. It allows you to:
+
+- Write content in Markdown
+- Use Svelte components inside your markdown
+- Add interactivity to your docs
+
+## Interactive Example
+
+Here's a counter component embedded right in this markdown file:
+
+<div class="not-prose my-6">
+  <div class="card bg-base-100 shadow-xl">
+    <div class="card-body items-center text-center">
+      <h2 class="card-title">Interactive Counter</h2>
+      <p class="text-5xl font-bold text-primary">{count}</p>
+      <div class="card-actions">
+        <button class="btn btn-primary" onclick={() => count++}>
+          Increment
+        </button>
+        <button class="btn btn-secondary" onclick={() => count--}>
+          Decrement
+        </button>
+        <button class="btn btn-ghost" onclick={() => count = 0}>
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Features
+
+### 🎨 DaisyUI Components
+
+This project uses DaisyUI for beautiful, accessible UI components:
+
+<div class="not-prose my-4 flex flex-wrap gap-2">
+  <button class="btn btn-primary">Primary</button>
+  <button class="btn btn-secondary">Secondary</button>
+  <button class="btn btn-accent">Accent</button>
+  <button class="btn btn-info">Info</button>
+  <button class="btn btn-success">Success</button>
+  <button class="btn btn-warning">Warning</button>
+  <button class="btn btn-error">Error</button>
+</div>
+
+### 🌈 Theme Support
+
+Use the theme dropdown in the navbar to switch between themes. All DaisyUI components automatically adapt to the selected theme!
+
+### ⚡ Static Site Generation
+
+This project is configured for static site generation, perfect for hosting on:
+
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static hosting
+
+## Code Examples
+
+Here's how you create a simple Svelte component:
+
+```svelte
+<script>
+  let name = 'World';
+</script>
+
+<h1>Hello {name}!</h1>
+
+<style>
+  h1 {
+    color: purple;
+  }
+</style>
+```
+
+And here's how you use DaisyUI classes:
+
+```html
+<button class="btn btn-primary">Click Me!</button>
+
+<div class="card bg-base-100 shadow-xl">
+  <div class="card-body">
+    <h2 class="card-title">Card Title</h2>
+    <p>Card content goes here.</p>
+  </div>
+</div>
+```
+
+## Useful Links
+
+<div class="not-prose my-6 grid gap-4 md:grid-cols-2">
+  <a href="https://svelte.dev/docs/kit" target="_blank" class="card bg-primary text-primary-content hover:bg-primary-focus transition-colors">
+    <div class="card-body">
+      <h3 class="card-title">SvelteKit Docs</h3>
+      <p>Official SvelteKit documentation</p>
+    </div>
+  </a>
+  <a href="https://daisyui.com" target="_blank" class="card bg-secondary text-secondary-content hover:bg-secondary-focus transition-colors">
+    <div class="card-body">
+      <h3 class="card-title">DaisyUI</h3>
+      <p>Component library for Tailwind CSS</p>
+    </div>
+  </a>
+  <a href="https://mdsvex.com" target="_blank" class="card bg-accent text-accent-content hover:bg-accent-focus transition-colors">
+    <div class="card-body">
+      <h3 class="card-title">MDsveX</h3>
+      <p>Markdown for Svelte components</p>
+    </div>
+  </a>
+  <a href="https://tailwindcss.com" target="_blank" class="card bg-info text-info-content hover:bg-info-focus transition-colors">
+    <div class="card-body">
+      <h3 class="card-title">Tailwind CSS</h3>
+      <p>Utility-first CSS framework</p>
+    </div>
+  </a>
+</div>
+
+---
+
+<div class="not-prose alert alert-info my-6">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+  <span>This entire page is written in Markdown with embedded Svelte components!</span>
+</div>
+
+</div>
+

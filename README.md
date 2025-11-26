@@ -55,68 +55,37 @@ This project is configured to deploy as a static site to GitHub Pages.
 
 ### Option 2: GitHub Actions (Recommended)
 
-1. Create a file `.github/workflows/deploy.yml` with the following content:
+The GitHub Actions workflow file (`.github/workflows/deploy.yml`) is already included in this project!
 
-   ```yaml
-   name: Deploy to GitHub Pages
+**Setup Steps:**
 
-   on:
-     push:
-       branches: ['main']
-     workflow_dispatch:
+1. **Configure GitHub Pages:**
+   - Go to your repository's **Settings** → **Pages**
+   - Under "Build and deployment", select **GitHub Actions** as the source
 
-   permissions:
-     contents: read
-     pages: write
-     id-token: write
+2. **Update the base path** in `svelte.config.js` to match your repository name:
+   ```js
+   base: process.env.NODE_ENV === 'production' ? '/your-repo-name' : ''
+   ```
+   Replace `your-repo-name` with your actual GitHub repository name.
 
-   concurrency:
-     group: 'pages'
-     cancel-in-progress: false
-
-   jobs:
-     build:
-       runs-on: ubuntu-latest
-       steps:
-         - name: Checkout
-           uses: actions/checkout@v4
-
-         - name: Setup Node
-           uses: actions/setup-node@v4
-           with:
-             node-version: '20'
-             cache: 'npm'
-
-         - name: Install dependencies
-           run: npm ci
-
-         - name: Build
-           run: npm run build
-           env:
-             NODE_ENV: production
-
-         - name: Upload artifact
-           uses: actions/upload-pages-artifact@v3
-           with:
-             path: ./build
-
-     deploy:
-       environment:
-         name: github-pages
-         url: ${{ steps.deployment.outputs.page_url }}
-       runs-on: ubuntu-latest
-       needs: build
-       steps:
-         - name: Deploy to GitHub Pages
-           id: deployment
-           uses: actions/deploy-pages@v4
+3. **Push to GitHub:**
+   ```sh
+   git add .
+   git commit -m "Setup GitHub Pages deployment"
+   git push origin main
    ```
 
-2. Go to your repository's **Settings** → **Pages**.
+4. **Monitor deployment:**
+   - Go to the **Actions** tab in your repository
+   - Watch the deployment workflow run
+   - Once complete, your site will be live!
 
-3. Under "Build and deployment", select **GitHub Actions** as the source.
-
-4. Push your changes to the `main` branch to trigger the deployment.
+The workflow automatically:
+- ✅ Triggers on every push to `main` branch
+- ✅ Builds your SvelteKit app
+- ✅ Deploys to GitHub Pages
+- ✅ Can be manually triggered from the Actions tab
 
 ### Important Notes
 

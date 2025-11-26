@@ -11,7 +11,7 @@
 			</h1>
 			<p class="py-6 text-base-content/70 text-lg">
 				A beautiful demo showcasing DaisyUI components with SvelteKit.
-				Try changing the theme using the dropdown in the navbar!
+				Try changing the theme using the dropdown in the navbar!!!
 			</p>
 			<div class="flex justify-center gap-4">
 				<a href="{base}/docs" class="btn btn-primary">Read the Docs</a>

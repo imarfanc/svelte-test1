@@ -4,12 +4,12 @@ description: Learn how to use this SvelteKit + DaisyUI project
 ---
 
 <script>
+  import Icon from '@iconify/svelte';
+  import { base } from '$app/paths';
   let count = $state(0);
 </script>
 
-<div class="prose prose-lg max-w-none">
-
-# 📚 Documentation
+# <Icon icon="mdi:book-open-page-variant" class="inline-block" /> Documentation
 
 Welcome to the documentation! This page is written in **Markdown** and rendered using [mdsvex](https://mdsvex.com/).
 
@@ -105,7 +105,38 @@ And here's how you use DaisyUI classes:
 </div>
 ```
 
-## Useful Links
+## <Icon icon="mdi:file-document" class="inline-block" /> Markdown Articles
+
+Check out these markdown files rendered as pages:
+
+<div class="not-prose my-6 grid gap-4 md:grid-cols-2">
+  <a href="{base}/docs/test" class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow border border-base-300">
+    <div class="card-body">
+      <h3 class="card-title flex items-center gap-2">
+        <Icon icon="mdi:bash" class="text-success" />
+        Shell Commands Guide
+      </h3>
+      <p class="text-base-content/70">macOS shell scripts and terminal commands</p>
+      <div class="card-actions justify-end">
+        <span class="badge badge-outline">test.md</span>
+      </div>
+    </div>
+  </a>
+  <a href="{base}/docs/test-2" class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow border border-base-300">
+    <div class="card-body">
+      <h3 class="card-title flex items-center gap-2">
+        <Icon icon="mdi:note-text" class="text-info" />
+        Daily Notes
+      </h3>
+      <p class="text-base-content/70">Simple notes and productivity tips</p>
+      <div class="card-actions justify-end">
+        <span class="badge badge-outline">test-2.md</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+## <Icon icon="mdi:link-variant" class="inline-block" /> Useful Links
 
 <div class="not-prose my-6 grid gap-4 md:grid-cols-2">
   <a href="https://svelte.dev/docs/kit" target="_blank" class="card bg-primary text-primary-content hover:bg-primary-focus transition-colors">
@@ -137,9 +168,7 @@ And here's how you use DaisyUI classes:
 ---
 
 <div class="not-prose alert alert-info my-6">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+  <Icon icon="mdi:information" class="text-2xl" />
   <span>This entire page is written in Markdown with embedded Svelte components!</span>
-</div>
-
 </div>
 
